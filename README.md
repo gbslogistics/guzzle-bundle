@@ -1,3 +1,10 @@
+NOTE
+====
+
+This repo has been mostly gutted for use by GBS LOGISTICS AND FIVES SUPPORT
+as the only part that was needed was the JMS Serializer Response Parser.
+If you're interested in what was taken out, please visit https://github.com/misd-service-development/guzzle-bundle .
+
 GuzzleBundle
 ============
 

@@ -22,7 +22,7 @@ class JMSSerializerBodyVisitorTest extends \PHPUnit_Framework_TestCase
         $expectedContext->setGroups('group');
         $expectedContext->setVersion(1);
         $expectedContext->setSerializeNull(true);
-        $expectedContext->enableMaxDepthChecks();
+        //$expectedContext->enableMaxDepthChecks();
 
         $parameter = $this->getMock('Guzzle\Service\Description\Parameter');
         $parameter->expects($this->once())->method('getSentAs')->will($this->returnValue('json'));
@@ -32,7 +32,7 @@ class JMSSerializerBodyVisitorTest extends \PHPUnit_Framework_TestCase
             array('jms_serializer.groups', 'group'),
             array('jms_serializer.version', 1),
             array('jms_serializer.serialize_nulls', true),
-            array('jms_serializer.max_depth_checks', true)
+            //array('jms_serializer.max_depth_checks', true)
         );
 
         $parameter->expects($this->any())

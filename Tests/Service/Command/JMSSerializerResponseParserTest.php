@@ -23,7 +23,7 @@ class JMSSerializerResponseParserTest extends \PHPUnit_Framework_TestCase
         $expectedContext = DeserializationContext::create();
         $expectedContext->setGroups('group');
         $expectedContext->setVersion(1);
-        $expectedContext->enableMaxDepthChecks();
+        //$expectedContext->enableMaxDepthChecks();
 
         $operation = $this->getMock('Guzzle\Service\Description\OperationInterface');
         $operation->expects($this->any())->method('getResponseType')->will($this->returnValue(OperationInterface::TYPE_CLASS));
@@ -32,7 +32,7 @@ class JMSSerializerResponseParserTest extends \PHPUnit_Framework_TestCase
         $dataMap = array(
             array('jms_serializer.groups', 'group'),
             array('jms_serializer.version', 1),
-            array('jms_serializer.max_depth_checks', true)
+            //array('jms_serializer.max_depth_checks', true)
         );
 
         $operation->expects($this->any())
